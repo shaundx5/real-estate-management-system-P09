@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buyer dashboard | P09 Estate</title>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap.min.css"><link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div id="app-navbar"></div>
+  <main class="container py-4 py-lg-5">
+    <div id="page-alert"></div>
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+      <div><p class="section-kicker mb-1">Buyer and tenant area</p><h1 class="h2 mb-1">Welcome, <span id="account-name">account</span></h1><p id="account-summary" class="text-secondary mb-0"></p></div>
+      <a class="btn btn-dark" href="/index.html">Browse properties</a>
+    </div>
+
+    <ul class="nav nav-tabs mb-4" role="tablist">
+      <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#favourites-pane" type="button" role="tab">Saved properties</button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#enquiries-pane" type="button" role="tab">My enquiries</button></li>
+    </ul>
+
+    <div class="tab-content">
+      <section class="tab-pane fade show active" id="favourites-pane" role="tabpanel">
+        <div id="favourite-alert"></div>
+        <div id="favourite-list" class="row g-4"></div>
+        <div id="favourite-pagination" class="mt-4"></div>
+      </section>
+      <section class="tab-pane fade" id="enquiries-pane" role="tabpanel">
+        <div class="card dashboard-card mb-3"><div class="card-body"><form id="enquiry-filter" class="row g-2 align-items-end"><div class="col-sm-5 col-md-3"><label class="form-label" for="enquiry-status-filter">Status</label><select class="form-select" id="enquiry-status-filter"><option value="">All statuses</option><option>New</option><option>In Progress</option><option>Approved</option><option>Rejected</option><option>Closed</option></select></div><div class="col-sm-auto"><button class="btn btn-outline-dark" type="submit">Apply filter</button></div></form></div></div>
+        <div id="enquiry-alert"></div>
+        <div class="card dashboard-card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Property</th><th>Message</th><th>Status</th><th>Last update</th><th>Action</th></tr></thead><tbody id="enquiry-list"></tbody></table></div></div>
+        <div id="enquiry-empty" class="empty-state d-none mt-3">You have not submitted any enquiries matching this filter.</div>
+        <div id="enquiry-pagination" class="mt-4"></div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal fade" id="rating-modal" tabindex="-1" aria-labelledby="rating-title" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><form id="rating-form"><div class="modal-header"><h2 class="modal-title fs-5" id="rating-title">Rate this agent</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="rating-alert"></div><input type="hidden" id="rating-agent-id"><input type="hidden" id="rating-enquiry-id"><div class="mb-3"><label class="form-label required" for="rating-score">Score</label><select class="form-select" id="rating-score" required><option value="5">5 - Excellent</option><option value="4">4 - Good</option><option value="3">3 - Satisfactory</option><option value="2">2 - Poor</option><option value="1">1 - Very poor</option></select></div><div><label class="form-label" for="rating-comment">Comment</label><textarea class="form-control" id="rating-comment" maxlength="1000" rows="4" placeholder="Describe how the agent handled your enquiry"></textarea></div></div><div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button id="rating-submit" class="btn btn-dark" type="submit">Submit rating</button></div></form></div></div></div>
+
+  <script src="/assets/vendor/bootstrap.bundle.min.js"></script><script src="/assets/js/common.js"></script><script src="/assets/js/buyer.js"></script>
+</body>
+</html>
+

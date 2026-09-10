@@ -1,0 +1,162 @@
+{
+  "generatedAt": "2026-09-09T10:51:36.394212+00:00",
+  "result": "passed",
+  "runtime": "Node.js v24.19.0",
+  "database": "Genuine MongoDB 8.0.12 replica set, isolated temporary databases; no mocks",
+  "command": "npm test",
+  "integration": {
+    "tests": 16,
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0
+  },
+  "postman": {
+    "requests": 185,
+    "assertions": 809,
+    "failures": 0
+  },
+  "productionDependencyAudit": {
+    "command": "npm audit --omit=dev",
+    "knownVulnerabilities": 0
+  },
+  "endpointCoverage": {
+    "endpoints": 29,
+    "allHaveSuccessAndFailureCases": true
+  },
+  "modules": [
+    {
+      "number": 1,
+      "module": "User Registration & Authentication",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 2,
+      "module": "Property Listing Management",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 3,
+      "module": "Property Verification Workflow",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 4,
+      "module": "Advanced Search & Filtering",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 5,
+      "module": "Favourites/Saved Properties",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 6,
+      "module": "Enquiry Submission Module",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 7,
+      "module": "Lead Management for Agents",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 8,
+      "module": "Property Status Tracking",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 9,
+      "module": "Agent Profile & Ratings",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 10,
+      "module": "Location-Based Listing Grouping",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 11,
+      "module": "Admin Moderation Dashboard",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 12,
+      "module": "Reports & Analytics",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    },
+    {
+      "number": 13,
+      "module": "Role-Based Access Control",
+      "endpointExists": true,
+      "inputValidation": true,
+      "roleAndOwnershipAsApplicable": true,
+      "realBusinessRules": true,
+      "postmanCovered": true
+    }
+  ],
+  "additionalChecks": [
+    "Concurrent favourites/enquiries: exactly one insert",
+    "Concurrent status requests: exactly one transition",
+    "Deletion/enquiry race: no active lead on deleted property",
+    "Historical references preserved by soft deletion",
+    "Current-role JWT checks and all protected route families",
+    "Admin CLI seed is idempotent and refuses buyer elevation",
+    "Actual server.js entry point starts and serves health",
+    "Expired and modified JWTs fail",
+    "No password/hash/stack leakage in API responses",
+    "All eight README sections in required order"
+  ],
+  "limits": [
+    "Docker Desktop recipe is provided but not executed in this container",
+    "No optional frontend included",
+    "Functional and concurrency verification is not a general load test"
+  ]
+}

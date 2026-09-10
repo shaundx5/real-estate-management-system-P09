@@ -1,0 +1,178 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "postmanSuccessCases": 1,
+      "postmanFailureCases": 1
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "postmanSuccessCases": 5,
+      "postmanFailureCases": 4
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "postmanSuccessCases": 6,
+      "postmanFailureCases": 2
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "postmanSuccessCases": 1,
+      "postmanFailureCases": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/properties",
+      "postmanSuccessCases": 4,
+      "postmanFailureCases": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/properties/search",
+      "postmanSuccessCases": 4,
+      "postmanFailureCases": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/properties/mine",
+      "postmanSuccessCases": 1,
+      "postmanFailureCases": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/properties/locations",
+      "postmanSuccessCases": 3,
+      "postmanFailureCases": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/properties/city/:city",
+      "postmanSuccessCases": 2,
+      "postmanFailureCases": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/properties/:id",
+      "postmanSuccessCases": 2,
+      "postmanFailureCases": 3
+    },
+    {
+      "method": "PUT",
+      "path": "/api/properties/:id/verify",
+      "postmanSuccessCases": 3,
+      "postmanFailureCases": 6
+    },
+    {
+      "method": "PUT",
+      "path": "/api/properties/:id/status",
+      "postmanSuccessCases": 4,
+      "postmanFailureCases": 11
+    },
+    {
+      "method": "POST",
+      "path": "/api/properties/:id/flag",
+      "postmanSuccessCases": 1,
+      "postmanFailureCases": 4
+    },
+    {
+      "method": "PUT",
+      "path": "/api/properties/:id",
+      "postmanSuccessCases": 2,
+      "postmanFailureCases": 6
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/properties/:id",
+      "postmanSuccessCases": 1,
+      "postmanFailureCases": 6
+    },
+    {
+      "method": "POST",
+      "path": "/api/favourites",
+      "postmanSuccessCases": 3,
+      "postmanFailureCases": 6
+    },
+    {
+      "method": "GET",
+      "path": "/api/favourites",
+      "postmanSuccessCases": 3,
+      "postmanFailureCases": 2
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/favourites/:id",
+      "postmanSuccessCases": 1,
+      "postmanFailureCases": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/enquiries",
+      "postmanSuccessCases": 2,
+      "postmanFailureCases": 8
+    },
+    {
+      "method": "GET",
+      "path": "/api/enquiries/mine",
+      "postmanSuccessCases": 1,
+      "postmanFailureCases": 1
+    },
+    {
+      "method": "GET",
+      "path": "/api/enquiries",
+      "postmanSuccessCases": 2,
+      "postmanFailureCases": 3
+    },
+    {
+      "method": "PUT",
+      "path": "/api/enquiries/:id/status",
+      "postmanSuccessCases": 5,
+      "postmanFailureCases": 8
+    },
+    {
+      "method": "GET",
+      "path": "/api/agents/:id/profile",
+      "postmanSuccessCases": 2,
+      "postmanFailureCases": 2
+    },
+    {
+      "method": "POST",
+      "path": "/api/agents/:id/ratings",
+      "postmanSuccessCases": 2,
+      "postmanFailureCases": 9
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/moderation",
+      "postmanSuccessCases": 2,
+      "postmanFailureCases": 3
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/moderation/:id",
+      "postmanSuccessCases": 3,
+      "postmanFailureCases": 5
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/agents/:id/verify",
+      "postmanSuccessCases": 2,
+      "postmanFailureCases": 4
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/reports/top-properties",
+      "postmanSuccessCases": 1,
+      "postmanFailureCases": 3
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/reports/agent-performance",
+      "postmanSuccessCases": 1,
+      "postmanFailureCases": 3
+    }
+  ]
+}

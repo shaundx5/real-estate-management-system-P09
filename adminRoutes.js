@@ -1,0 +1,14 @@
+const router = require('express').Router();
+const c = require('../controllers/adminController');
+const reports = require('../controllers/reportController');
+const v = require('../validators/admin');
+const { idParams } = require('../validators/common');
+const validate = require('../middleware/validate');
+const { authenticate, authorize } = require('../middleware/auth');
+router.use(authenticate, authorize('admin'));
+router.get('/moderation', validate({ query: v.moderation }), c.dashboard);
+router.put('/moderation/:id', validate({ params: idParams, body: v.action }), c.moderate);
+router.put('/agents/:id/verify', validate({ params: idParams }), c.verifyAgent);
+router.get('/reports/top-properties', validate({ query: v.reports }), reports.topProperties);
+router.get('/reports/agent-performance', validate({ query: v.reports }), reports.agentPerformance);
+module.exports = router;

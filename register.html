@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | P09 Estate</title>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap.min.css"><link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body data-auth-page="register">
+  <div id="app-navbar"></div>
+  <main class="container py-5">
+    <div class="auth-shell mx-auto">
+      <div id="page-alert"></div>
+      <div class="card border-0 shadow-sm"><div class="card-body p-4 p-md-5">
+        <p class="section-kicker mb-2">New account</p>
+        <h1 class="h2 mb-3">Register</h1>
+        <p class="text-secondary">Administrators are created using the backend seed command and cannot register here.</p>
+        <form id="auth-form" class="vstack gap-3">
+          <div><label class="form-label required" for="name">Full name</label><input class="form-control" id="name" name="name" minlength="2" maxlength="100" autocomplete="name" required></div>
+          <div><label class="form-label required" for="email">Email</label><input class="form-control" id="email" name="email" type="email" maxlength="254" autocomplete="email" required></div>
+          <div><label class="form-label required" for="role">Account role</label><select class="form-select" id="role" name="role" required><option value="buyer">Buyer</option><option value="tenant">Tenant</option><option value="agent">Agent</option></select></div>
+          <div><label class="form-label required" for="password">Password</label><input class="form-control" id="password" name="password" type="password" minlength="12" maxlength="72" autocomplete="new-password" required><div class="form-text">Use at least 12 characters with at least one letter and one number.</div></div>
+          <button class="btn btn-dark" id="auth-submit" type="submit">Create account</button>
+        </form>
+        <p class="small text-secondary mt-4 mb-0">Already registered? <a href="/login.html">Log in</a>.</p>
+      </div></div>
+    </div>
+  </main>
+  <script src="/assets/vendor/bootstrap.bundle.min.js"></script><script src="/assets/js/common.js"></script><script src="/assets/js/auth.js"></script>
+</body>
+</html>
+

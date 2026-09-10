@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent profile | P09 Estate</title>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap.min.css"><link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div id="app-navbar"></div>
+  <main class="container py-4 py-lg-5">
+    <div id="page-alert"></div>
+    <div id="profile-loading" class="text-center py-5"><div class="spinner-border"><span class="visually-hidden">Loading</span></div></div>
+    <div id="profile-content" class="d-none">
+      <div class="card border-0 shadow-sm mb-4"><div class="card-body p-4"><div class="d-flex flex-wrap justify-content-between align-items-start gap-3"><div><p class="section-kicker mb-1">Public agent profile</p><h1 id="agent-name" class="h2 mb-2"></h1><div id="agent-verification"></div></div><div class="text-end"><div id="rating-average" class="metric-value"></div><div id="rating-count" class="small text-secondary"></div></div></div></div></div>
+      <div class="row g-4"><section class="col-lg-8"><h2 class="h4 mb-3">Public listings <span id="listing-count" class="badge text-bg-light border"></span></h2><div id="agent-listings" class="row g-4"></div><div id="agent-listing-pagination" class="mt-4"></div></section><aside class="col-lg-4"><h2 class="h4 mb-3">Recent ratings</h2><div id="recent-ratings" class="vstack gap-3"></div></aside></div>
+    </div>
+  </main>
+  <script src="/assets/vendor/bootstrap.bundle.min.js"></script><script src="/assets/js/common.js"></script><script src="/assets/js/agent-profile.js"></script>
+</body>
+</html>
+

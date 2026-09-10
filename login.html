@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | P09 Estate</title>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap.min.css"><link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body data-auth-page="login">
+  <div id="app-navbar"></div>
+  <main class="container py-5">
+    <div class="auth-shell mx-auto">
+      <div id="page-alert"></div>
+      <div class="card border-0 shadow-sm"><div class="card-body p-4 p-md-5">
+        <p class="section-kicker mb-2">Account access</p>
+        <h1 class="h2 mb-3">Log in</h1>
+        <p class="text-secondary">Use a registered buyer, tenant, agent or seeded administrator account.</p>
+        <form id="auth-form" class="vstack gap-3">
+          <div><label class="form-label required" for="email">Email</label><input class="form-control" id="email" name="email" type="email" maxlength="254" autocomplete="email" required></div>
+          <div><label class="form-label required" for="password">Password</label><input class="form-control" id="password" name="password" type="password" maxlength="72" autocomplete="current-password" required></div>
+          <button class="btn btn-dark" id="auth-submit" type="submit">Log in</button>
+        </form>
+        <p class="small text-secondary mt-4 mb-0">Need an account? <a href="/register.html">Register as a buyer, tenant or agent</a>.</p>
+      </div></div>
+    </div>
+  </main>
+  <script src="/assets/vendor/bootstrap.bundle.min.js"></script><script src="/assets/js/common.js"></script><script src="/assets/js/auth.js"></script>
+</body>
+</html>
+

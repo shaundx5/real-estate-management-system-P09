@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin dashboard | P09 Estate</title>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap.min.css"><link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div id="app-navbar"></div>
+  <main class="container py-4 py-lg-5">
+    <div id="page-alert"></div>
+    <div class="mb-4"><p class="section-kicker mb-1">Administrator area</p><h1 class="h2 mb-1">Moderation and reports</h1><p id="admin-summary" class="text-secondary mb-0"></p></div>
+
+    <ul class="nav nav-tabs mb-4" role="tablist"><li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#moderation-pane" type="button">Moderation</button></li><li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#reports-pane" type="button">Reports and analytics</button></li></ul>
+    <div class="tab-content">
+      <section class="tab-pane fade show active" id="moderation-pane">
+        <div id="moderation-counts" class="row g-3 mb-4"></div>
+        <div class="card dashboard-card mb-4"><div class="card-body"><form id="moderation-filter" class="row g-2 align-items-end"><div class="col-sm-6 col-md-3"><label class="form-label" for="moderation-view">Listing queue</label><select class="form-select" id="moderation-view"><option value="pending">Pending</option><option value="flagged">Flagged</option><option value="rejected">Rejected</option><option value="all">All</option></select></div><div class="col-sm-auto"><button class="btn btn-outline-dark" type="submit">Load queue</button></div></form></div></div>
+        <div id="moderation-alert"></div>
+        <div class="row g-4"><div class="col-xl-8"><h2 class="h4 mb-3">Listings</h2><div class="card dashboard-card"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Listing</th><th>Review state</th><th>Flag information</th><th>Actions</th></tr></thead><tbody id="moderation-list"></tbody></table></div></div><div id="moderation-empty" class="empty-state d-none mt-3">This listing queue is empty.</div><div id="moderation-pagination" class="mt-3"></div></div><div class="col-xl-4"><h2 class="h4 mb-3">Pending agents</h2><div id="pending-agents" class="vstack gap-3"></div></div></div>
+      </section>
+
+      <section class="tab-pane fade" id="reports-pane">
+        <div id="report-alert"></div>
+        <div class="card dashboard-card mb-4"><div class="card-header bg-white"><h2 class="h4 mb-0">Most-enquired properties</h2></div><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Property</th><th>Enquiries</th><th>Approved</th><th>Closed</th><th>Record state</th></tr></thead><tbody id="top-property-report"></tbody></table></div></div><div id="top-report-pagination" class="mb-5"></div>
+        <div class="card dashboard-card"><div class="card-header bg-white"><h2 class="h4 mb-0">Agent performance</h2></div><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Agent</th><th>Listings</th><th>Active</th><th>Enquiries</th><th>Closed</th><th>Sold/Rented</th><th>Conversion</th></tr></thead><tbody id="agent-report"></tbody></table></div></div><div id="agent-report-pagination" class="mt-3"></div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal fade" id="reject-modal" tabindex="-1" aria-labelledby="reject-title" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><form id="reject-form"><div class="modal-header"><h2 class="modal-title fs-5" id="reject-title">Reject listing</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="reject-alert"></div><input id="reject-property-id" type="hidden"><label class="form-label required" for="reject-reason">Reason</label><textarea class="form-control" id="reject-reason" minlength="10" maxlength="1000" rows="4" required placeholder="Explain what the agent must correct"></textarea></div><div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button id="reject-submit" class="btn btn-danger" type="submit">Reject listing</button></div></form></div></div></div>
+
+  <script src="/assets/vendor/bootstrap.bundle.min.js"></script><script src="/assets/js/common.js"></script><script src="/assets/js/admin.js"></script>
+</body>
+</html>
+

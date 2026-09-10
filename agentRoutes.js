@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const c = require('../controllers/agentController');
+const v = require('../validators/agents');
+const { idParams } = require('../validators/common');
+const validate = require('../middleware/validate');
+const { authenticate, authorize } = require('../middleware/auth');
+const { ownRatingEnquiry } = require('../middleware/ownership');
+router.get('/:id/profile', validate({ params: idParams, query: v.profile }), c.profile);
+router.post('/:id/ratings', authenticate, authorize('buyer', 'tenant'), validate({ params: idParams, body: v.rate }), ownRatingEnquiry, c.rate);
+module.exports = router;

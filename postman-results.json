@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-09-09T10:49:48.812Z",
+  "database": "Real MongoDB replica set (isolated test database)",
+  "requests": {
+    "total": 185,
+    "pending": 0,
+    "failed": 0
+  },
+  "assertions": {
+    "total": 809,
+    "pending": 0,
+    "failed": 0
+  },
+  "failures": []
+}

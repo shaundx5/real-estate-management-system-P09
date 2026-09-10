@@ -1,0 +1,13 @@
+const router = require('express').Router();
+const c = require('../controllers/enquiryController');
+const v = require('../validators/enquiries');
+const { idParams } = require('../validators/common');
+const validate = require('../middleware/validate');
+const { authenticate, authorize } = require('../middleware/auth');
+const { ownLead } = require('../middleware/ownership');
+router.use(authenticate);
+router.post('/', authorize('buyer', 'tenant'), validate({ body: v.create }), c.create);
+router.get('/mine', authorize('buyer', 'tenant'), validate({ query: v.list }), c.mine);
+router.get('/', authorize('agent'), validate({ query: v.list }), c.list);
+router.put('/:id/status', authorize('agent'), validate({ params: idParams, body: v.status }), ownLead, c.status);
+module.exports = router;

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Property Search | P09 Estate</title>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div id="app-navbar"></div>
+  <main>
+    <section class="container py-4 py-lg-5">
+      <div class="hero p-4 p-lg-5">
+        <p class="text-uppercase small fw-semibold mb-2">Verified property listings</p>
+        <h1 class="display-6 fw-bold">Find a place that fits your requirements.</h1>
+        <p class="mb-0 col-lg-8">Search verified listings by location, price, property type and bedrooms. Each result comes directly from the P09 backend.</p>
+      </div>
+
+      <div class="card border-0 shadow-sm filter-card mx-lg-4">
+        <div class="card-body p-4">
+          <form id="search-form" class="row g-3">
+            <div class="col-md-4 col-lg-3">
+              <label class="form-label" for="city">City</label>
+              <input class="form-control" id="city" name="city" placeholder="Bangalore">
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <label class="form-label" for="locality">Locality</label>
+              <input class="form-control" id="locality" name="locality" placeholder="Kengeri">
+            </div>
+            <div class="col-md-4 col-lg-2">
+              <label class="form-label" for="type">Type</label>
+              <select class="form-select" id="type" name="type">
+                <option value="">Any type</option><option>Apartment</option><option>House</option><option>Villa</option><option>Plot</option><option>Commercial</option>
+              </select>
+            </div>
+            <div class="col-md-4 col-lg-2">
+              <label class="form-label" for="bedrooms">Bedrooms</label>
+              <select class="form-select" id="bedrooms" name="bedrooms">
+                <option value="">Any</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+              </select>
+            </div>
+            <div class="col-md-4 col-lg-2">
+              <label class="form-label" for="listingFor">Purpose</label>
+              <select class="form-select" id="listingFor" name="listingFor"><option value="">Sale or rent</option><option>Sale</option><option>Rent</option></select>
+            </div>
+            <div class="col-md-4 col-lg-2">
+              <label class="form-label" for="minPrice">Minimum price</label>
+              <input class="form-control" id="minPrice" name="minPrice" type="number" min="0" step="1" placeholder="0">
+            </div>
+            <div class="col-md-4 col-lg-2">
+              <label class="form-label" for="maxPrice">Maximum price</label>
+              <input class="form-control" id="maxPrice" name="maxPrice" type="number" min="0" step="1" placeholder="Any">
+            </div>
+            <div class="col-md-4 col-lg-2">
+              <label class="form-label" for="status">Status</label>
+              <select class="form-select" id="status" name="status"><option value="">Any status</option><option>Available</option><option>Under Negotiation</option><option>Sold</option><option>Rented</option></select>
+            </div>
+            <div class="col-md-4 col-lg-2">
+              <label class="form-label" for="sort">Sort</label>
+              <select class="form-select" id="sort" name="sort"><option value="newest">Newest</option><option value="price_asc">Price: low to high</option><option value="price_desc">Price: high to low</option></select>
+            </div>
+            <div class="col-lg-4 d-flex align-items-end gap-2">
+              <button class="btn btn-dark flex-grow-1" id="search-button" type="submit">Search properties</button>
+              <button class="btn btn-outline-secondary" id="clear-search" type="button">Clear</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="container pb-3" aria-labelledby="locations-heading">
+      <div class="d-flex justify-content-between align-items-center gap-3 mb-3">
+        <div><p class="section-kicker mb-1">Browse by location</p><h2 class="h4 mb-0" id="locations-heading">Cities with public listings</h2></div>
+      </div>
+      <div id="location-alert"></div>
+      <div id="location-groups" class="d-flex flex-wrap gap-2"></div>
+    </section>
+
+    <section class="container py-4" aria-labelledby="results-heading">
+      <div id="page-alert"></div>
+      <div class="d-flex justify-content-between align-items-end gap-3 mb-3">
+        <div><p class="section-kicker mb-1">Search results</p><h2 class="h3 mb-0" id="results-heading">Verified properties</h2></div>
+        <span id="results-count" class="small text-secondary"></span>
+      </div>
+      <div id="property-results" class="row g-4"></div>
+      <div id="property-pagination" class="mt-4"></div>
+    </section>
+  </main>
+  <footer class="container py-4 text-center small text-secondary">P09 Real Estate Property Listing &amp; Enquiry Portal</footer>
+  <script src="/assets/vendor/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="/assets/js/home.js"></script>
+</body>
+</html>
+

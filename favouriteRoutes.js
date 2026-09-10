@@ -1,0 +1,12 @@
+const router = require('express').Router();
+const c = require('../controllers/favouriteController');
+const v = require('../validators/favourites');
+const { idParams } = require('../validators/common');
+const validate = require('../middleware/validate');
+const { authenticate, authorize } = require('../middleware/auth');
+const { ownFavourite } = require('../middleware/ownership');
+router.use(authenticate, authorize('buyer', 'tenant'));
+router.post('/', validate({ body: v.create }), c.create);
+router.get('/', validate({ query: v.list }), c.list);
+router.delete('/:id', validate({ params: idParams }), ownFavourite, c.remove);
+module.exports = router;

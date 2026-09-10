@@ -1,0 +1,31 @@
+{
+  "name": "p09-real-estate-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CIA-3 real estate listing, enquiry, moderation and analytics API",
+  "main": "server.js",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed:admin": "node scripts/seed-admin.js",
+    "test": "node --test --test-concurrency=1 tests/integration.test.js && node scripts/test-postman.js",
+    "test:integration": "node --test --test-concurrency=1 tests/integration.test.js",
+    "test:postman": "node scripts/test-postman.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "joi": "^18.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.0.0"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.0.0",
+    "newman": "^6.2.1",
+    "supertest": "^7.1.4"
+  }
+}
