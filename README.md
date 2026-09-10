@@ -1,14 +1,6 @@
 ## Project Title & Team Details
 
 **P09 — Real Estate Property Listing & Enquiry Portal**  
-College CIA-3 backend project.
-
-| Team detail | Value |
-| --- | --- |
-| Student name(s) | [Enter name(s)] |
-| Roll / registration number(s) | [Enter roll number(s)] |
-| Department | [Enter department] |
-| Section | [Enter section] |
 
 ## Problem Statement
 
